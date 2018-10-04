@@ -1,0 +1,37 @@
+task compilar << {
+    println 'Compilando projeto ' + olaMundo.projeto + ' ' + olaMundo.versao
+    println 'Se tiver problemas, enviar email para ' + olaMundo.email
+}
+
+task testesunitarios << {
+    println 'Estou testando...'
+}
+
+task empacotar << {
+    println 'Estou empacotando...'
+}
+
+task olaMundo{
+
+    ext.nome = "Tell Moitas"    
+    
+    ext{
+        projeto = "OlaMundoGradle"
+        email = "tellmoitas@gmail.com"
+        versao = "1.0"
+    }
+
+    
+    
+}
+
+/* olaMundo.doLast {
+        println 'Tarefa compilada ' + projeto + ' ' + versao
+    } */
+
+olaMundo.doLast{
+    String nome = "Tell"
+    Date agora = new Date()
+    println 'Ola, ' + nome + ' são ' + agora.toString()
+}
+

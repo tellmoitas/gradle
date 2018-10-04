@@ -1,0 +1,14 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+
+sourceCompatibility = '1.8' //versão compativel do java
+version = '1.0' //versão do projeto
+mainClassName = 'OlaMundo'
+
+//para usar java -jar
+jar {
+    manifest{
+        attributes 'Main-Class': 'OlaMundo'
+    }
+}
