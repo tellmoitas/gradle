@@ -1,0 +1,16 @@
+task a <<{
+    println 'A'
+}
+
+task b {
+    
+    dependsOn 'a'
+
+    doLast {
+        println 'B'
+    }
+}
+
+task c(dependsOn: 'b') <<{
+    println 'C'
+} 
