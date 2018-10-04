@@ -1,3 +1,6 @@
+//Tutorial de Gradle – 6. Dependencia entre tareas
+//https://www.youtube.com/watch?v=v2WJe_ikZiE&list=PLTd5ehIj0goO1R60FwVHIbLwFgtoAdKJ1&index=6
+
 task a <<{
     println 'A'
 }
