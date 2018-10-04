@@ -1,4 +1,7 @@
 task c {
+    onlyIf {
+        new File('teste.txt').exists()
+    }
     doLast {
         println 'Compilando o projeto'
     }
