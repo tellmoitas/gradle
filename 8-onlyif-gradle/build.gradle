@@ -1,0 +1,18 @@
+task c {
+    doLast {
+        println 'Compilando o projeto'
+    }
+}
+
+task d {
+    
+    onlyIf {
+        c.didWork
+    }
+    
+    doLast {
+        println 'Distribuindo o projeto'
+    }
+}
+
+
