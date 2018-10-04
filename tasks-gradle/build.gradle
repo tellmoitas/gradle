@@ -1,0 +1,28 @@
+// Tutorial de Gradle – 7. Más métodos de las tareas
+// https://www.youtube.com/watch?v=rz1nSTZUmHo&list=PLTd5ehIj0goO1R60FwVHIbLwFgtoAdKJ1&index=7
+
+task ola {
+    
+    //executa antes de todos
+    println 'configurando ola'
+
+    doFirst {
+        println 'chamando doFirst ola'
+        // executa antes de doLast
+    }
+    
+    doLast {
+        println 'chamando doLast ola'
+        // mais códigos
+    }
+}
+
+task ola2 (dependsOn: ola) {
+    doFirst{
+        println 'chamando doFirst ola 2'
+    }
+    doLast {
+        println 'chamando doLast ola 2'
+        // mais códigos
+    }
+}
