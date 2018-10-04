@@ -1,3 +1,9 @@
 task executar(type: Exec){
     commandLine 'ls','-lr'
 }
+
+task executar2(type: Exec){
+    commandLine 'ls','-lr'
+
+    standardOutput = new FileOutputStream('saida.txt')
+}

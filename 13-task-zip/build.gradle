@@ -1,0 +1,17 @@
+
+task criarDist << {
+    new File('dist').mkdirs()
+}
+
+task executar(type: Exec){
+    onlyIf {
+        criarDist.didWork
+    }
+    commandLine 'ls','-lr'
+
+    standardOutput = new FileOutputStream('saida.txt')
+}
+
+task comprimir (type: Zip){
+    archiveName 'arquivo.zip'
+}
