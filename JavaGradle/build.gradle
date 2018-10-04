@@ -1,3 +1,6 @@
+// Tutorial de Gradle – 4. Cómo usar Gradle con Java
+// https://www.youtube.com/watch?v=QSwy89dbgVQ&list=PLTd5ehIj0goO1R60FwVHIbLwFgtoAdKJ1&index=4
+
 apply plugin: 'java'
 apply plugin: 'application'
 
