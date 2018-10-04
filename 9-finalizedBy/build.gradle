@@ -1,0 +1,15 @@
+task a << {
+    println 'Executando tarefa A'
+}
+
+task b << {
+    println 'Executando tarefa B'
+}
+
+task c << {
+    println 'Executando tarefa C'
+}
+
+//obriga execuçao de b depois de a
+a.finalizedBy b
+b.finalizedBy c

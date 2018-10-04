@@ -1,0 +1,13 @@
+// 1. cria uma pasta dist
+task criarDist << {
+    new File('dist').mkdirs()
+}
+
+// 2. copia os arquivos de tools para dist
+task copiar (type: Copy, dependsOn: criarDist) {
+    from 'tools'
+    into 'dist/tools' //cria um sub-diretório
+
+    include '*.txt'
+    exclude '*.bat'
+}
