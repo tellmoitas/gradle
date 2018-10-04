@@ -6,4 +6,4 @@ task b << {
     println 'Executando tarefa B'
 }
 
-b.mustRunAfter a
+b.mustRunAfter a //obriga execuçao de a antes de b
