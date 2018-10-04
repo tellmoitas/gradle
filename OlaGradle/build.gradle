@@ -1,3 +1,6 @@
+// Tutorial de Gradle – 2. Creando las primeras tareas
+// https://www.youtube.com/watch?v=EowZBwbsdM8&index=2&list=PLTd5ehIj0goO1R60FwVHIbLwFgtoAdKJ1
+
 task compilar << {
     println 'Compilando projeto ' + olaMundo.projeto + ' ' + olaMundo.versao
     println 'Se tiver problemas, enviar email para ' + olaMundo.email
